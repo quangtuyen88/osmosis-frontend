@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <header className={styles.header}>
-        <h1>Simple Click Game</h1>
+        <h1>Simple Click Game by KenZ</h1>
       </header>
 
       <main className={styles.main}>
