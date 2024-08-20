@@ -1,7 +1,7 @@
 {
-  "name": "@kenz/simplegame2",
+  "name": "@kenz/simplegame3",
   "repository": "https://github.com/quangtuyen88/simplegame",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
