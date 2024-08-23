@@ -1,0 +1,7 @@
+build/*
+types/*
+
+**/generated/**
+localnet
+README.md
+*.sh

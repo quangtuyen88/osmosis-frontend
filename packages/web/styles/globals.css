@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #231d4b00;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-osmoverse-600;
+    border-radius: 18px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+  ::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0);
+  }
+  .tokendetailshadow::after {
+    @apply absolute -left-4 -right-4 bottom-0 top-0 bg-gradient-token-details-shadow content-[""];
+  }
+}
+
+@layer components {
+  html {
+    font-family: Inter, ui-sans-serif, system-ui;
+    @apply text-white-full;
+  }
+  body {
+    @apply bg-osmoverse-900;
+  }
+
+  h1 {
+    @apply text-h1 font-h1;
+  }
+  h2 {
+    @apply text-h2 font-h2;
+  }
+  h3 {
+    @apply text-h3 font-h3;
+  }
+  h4 {
+    @apply text-h4 font-h4;
+  }
+  h5 {
+    @apply text-h5 font-h5;
+  }
+  h6 {
+    @apply text-h6 font-h6;
+  }
+  .subtitle1 {
+    @apply text-subtitle1 font-subtitle1;
+  }
+  .subtitle2 {
+    @apply text-subtitle2 font-subtitle2;
+  }
+  .body1 {
+    @apply text-body1 font-body1;
+  }
+  .body2 {
+    @apply text-body2 font-body2;
+  }
+  .button {
+    @apply text-button font-button;
+  }
+  .caption {
+    @apply text-caption font-caption;
+  }
+  .overline {
+    @apply text-overline font-overline;
+  }
+  .text-superfluid-gradient {
+    @apply bg-superfluid bg-clip-text text-transparent;
+  }
+  .text-gradient-positive {
+    @apply bg-gradient-positive bg-clip-text text-transparent;
+  }
+  .text-supercharged-gradient {
+    @apply bg-supercharged bg-clip-text text-transparent;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input:focus-visible {
+    outline: none;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input {
+    @apply caret-osmoverse-100;
+  }
+
+  /* Global table style */
+
+  table {
+    @apply w-full table-fixed border-collapse text-left md:w-full;
+  }
+
+  thead > tr {
+    @apply sticky top-navbar z-40 border-b border-osmoverse-700 bg-osmoverse-900 text-body2 font-semibold text-osmoverse-300 md:top-navbar-mobile;
+  }
+
+  thead > tr > th:first-child {
+    @apply pl-0;
+  }
+
+  thead > tr > th {
+    @apply px-4 py-3;
+  }
+
+  tbody > tr {
+    @apply body1 rounded-3xl;
+  }
+
+  tbody > tr > td {
+    @apply p-4 text-right;
+  }
+
+  tbody > tr > td:first-child {
+    @apply rounded-l-3xl text-left;
+  }
+
+  tbody > tr > td:last-child {
+    @apply rounded-r-3xl;
+  }
+
+  .grid-cards {
+    @apply grid-cols-3 gap-4 1.5xl:grid-cols-2 1.5md:grid-cols-1;
+  }
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /** SLIDER STYLE */
+
+  input[type="range"] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    @apply mt-[5px] w-[200px] cursor-pointer rounded-full bg-transparent;
+  }
+
+  input[type="range"].disabled {
+    @apply cursor-default;
+  }
+
+  /** Slider Thumb **/
+
+  /* WebKit (Chrome, Safari) */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @apply h-[24px] w-[24px] -translate-y-1/3 rounded-full bg-osmoverse-100;
+  }
+
+  /* Firefox */
+  input[type="range"]::-moz-range-thumb {
+    @apply mt-[1px] h-[20px] w-[20px] rounded-full bg-osmoverse-100;
+  }
+
+  /* IE */
+  input[type="range"]::-ms-thumb {
+    @apply h-[24px] w-[24px] rounded-full bg-osmoverse-100;
+  }
+
+  /* Track */
+
+  /* WebKit (Chrome, Safari) */
+  input[type="range"]::-webkit-slider-runnable-track {
+    @apply h-[8px] w-full;
+  }
+
+  /* Firefox */
+  input[type="range"]::-moz-range-track {
+    @apply h-[2px] w-full;
+  }
+
+  /* IE */
+  input[type="range"]::-ms-track {
+    @apply h-[2px] w-full border-transparent bg-transparent text-transparent;
+  }
+}
+
+.html-transak-closed {
+  overflow: auto !important;
+}
+
+.transak_modal-overlay {
+  z-index: 9999 !important;
+}
+
+.transak_modal {
+  z-index: 9999 !important;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 150ms ease-in;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+/* Toasts override styles in `react-toastify/dist/ReactToastify.css` */
+.Toastify__toast-container {
+  z-index: 99999 !important;
+  max-width: 360px !important;
+  min-width: 360px !important;
+}
+
+.Toastify__toast--default {
+  max-width: 360px !important;
+  min-width: 360px !important;
+  border-radius: 16px !important;
+}
+
+.Toastify__toast {
+  padding: 20px 24px 20px 22px !important;
+  overflow: visible !important;
+}
+
+.Toastify__toast-body {
+  padding: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .Toastify__toast-container {
+    min-width: 280px !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+    right: 0 !important;
+    left: unset !important;
+  }
+
+  .Toastify__toast--default {
+    min-width: 280px !important;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .Toastify__toast {
+    padding: 16px !important;
+  }
+}
+
+/** CHARTS */
+.highcharts-background {
+  fill-opacity: 0;
+}
+
+.pulse {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pillLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUpExtreme {
+  from {
+    transform: translateY(120%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes deepPulse {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes slideInRightExtreme {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+
+.visx-tooltip {
+  z-index: 9000000;
+  box-shadow: none !important;
+}
+
+.visx-tooltip-glyph > svg {
+  width: 8px;
+  height: 8px;
+}
+
+.breakspaces {
+  white-space-collapse: break-spaces;
+}

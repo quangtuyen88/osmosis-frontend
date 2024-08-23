@@ -1,0 +1,22 @@
+version: "3.5"
+
+services:
+  frontend:
+    build:
+      context: ../
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    profiles:
+      - default
+      - all
+
+  frontend-testnet:
+    build:
+      context: ../
+      dockerfile: ./Dockerfile.testnet
+    ports:
+      - "3001:3000"
+    profiles:
+      - testnet
+      - all
