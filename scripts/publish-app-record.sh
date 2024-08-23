@@ -56,6 +56,7 @@ record:
   app_type: "$CERC_APP_TYPE"
   tags:
     - non-reference
+    - wishlist
 EOF
 
 
@@ -100,7 +101,8 @@ record:
     repository: "`git remote get-url origin`"
     repository_ref: "${GITHUB_SHA:-`git log -1 --format="%H"`}"
   tags:
-   - non-reference
+    - non-reference
+    - wishlist
 EOF
 
 cat $ADR_RECORD_FILE
