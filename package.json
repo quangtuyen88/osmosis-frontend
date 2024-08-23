@@ -36,10 +36,6 @@
   "pre-commit": [
     "pre-commit"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/osmosis-labs/osmosis-frontend.git"
-  },
   "author": "osmosis-labs",
   "bugs": {
     "url": "https://github.com/osmosis-labs/osmosis-frontend/issues"
